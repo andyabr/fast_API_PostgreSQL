@@ -7,7 +7,7 @@ if 'POSTGRES_DB' in os.environ:
 else:
     DB_URL = f"postgresql://ilyas:admin123@localhost:5432/ilyas_db"
 
-mode = "docker"
+mode = "local"
 POSTGRES_HOST = "localhost" if mode == "local" else "192.168.99.100"
 POSTGRES_DB = os.getenv("POSTGRES_DB") or "ilyas_db"
 POSTGRES_USER = os.getenv("POSTGRES_USER") or "ilyas"
